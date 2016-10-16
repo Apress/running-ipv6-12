@@ -1,0 +1,6 @@
+Listing 4-28. Displaying Active OSPFv3 Neighbors
+#show ipv6 ospf neighbor        
+Neighbor ID  Pri  State         Dead Time  Interface ID  Interface
+192.0.2.91   128  FULL/BDR      00:00:38   3             FastEthernet2/0
+192.0.2.17   128  FULL/DROTHER  00:00:35   2             FastEthernet2/0
+192.0.2.19     1  FULL/DROTHER  00:00:30   8             FastEthernet2/0

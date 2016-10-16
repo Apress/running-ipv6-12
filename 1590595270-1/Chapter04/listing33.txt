@@ -1,0 +1,21 @@
+Listing 4-33. The IPv4 Address Family Configuration Grouping
+Cisco#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Cisco(config)#router bgp 65500                                             
+Cisco(config-router)#address-family ipv4                                     
+Cisco(config-router-af)#^Z
+Cisco#show running-configuration | begin router bgp
+router bgp 65500
+ bgp log-neighbor-changes
+ neighbor 3ffe:9500:3C:74::10 remote-as 64900
+ neighbor 172.16.1.242 remote-as 65500
+ !
+ address-family ipv4
+ no neighbor 3ffe:9500:3C:74::10 activate
+ neighbor 172.16.1.242 activate
+ neighbor 172.16.1.242 prefix-list outfilter out
+ no auto-summary
+ no synchronization
+ network 192.0.2.0
+ exit-address-family
+ !

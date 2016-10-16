@@ -1,0 +1,7 @@
+Listing 4-24. Displaying the RIPng Database on a Cisco Router
+#show ipv6 rip database
+RIP process "my-rip", local RIB
+ 2001:DB8:31:2::/64, metric 2, installed
+     Ethernet0/FE80::204:27FF:FEFE:249F, expires in 155 secs
+ 3FFE:9500:3C:600::/56, metric 2, installed
+     Ethernet0/FE80::201:2FF:FE29:23B6, expires in 173 secs

@@ -1,0 +1,10 @@
+Listing 3-2. Using sudo to Execute Commands as Root
+% sudo ifconfig stf0 inet6 2002:dfe0:e1e2:1::1/16
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these two things:
+
+        #1) Respect the privacy of others.
+        #2) Think before you type.
+
+Password:

@@ -1,0 +1,19 @@
+Listing B-3. Startup Script for the racoon Daemon
+#!/bin/sh
+
+case "$1" in
+        start)
+                if [ -x /usr/local/sbin/racoon ]; then
+                        /usr/local/sbin/racoon && echo -n ' racoon'
+                fi
+        ;;
+
+        stop)
+                /usr/bin/killall racoon && echo -n ' racoon'
+        ;;
+
+        *)
+                echo "Usage: `basename $0` { start | stop }"
+                exit 64
+        ;;
+esac

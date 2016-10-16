@@ -1,0 +1,6 @@
+Listing B-2. Using chkconfig to Execute a Script at System Startup
+# chkconfig --list zebra
+service zebra supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add zebra')
+# chkconfig --add zebra
+# chkconfig --list zebra
+zebra           0:off   1:off   2:on    3:on    4:on    5:on    6:off

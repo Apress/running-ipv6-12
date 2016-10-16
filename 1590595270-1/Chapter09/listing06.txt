@@ -1,0 +1,7 @@
+Listing 9-6. IPF Filter Rules
+pass in all
+pass out all
+block out proto tcp from any to any port = 25
+block in from 2001:db8::/32 to any
+block in proto ipv6-icmp from any to ff02::1 icmp-type 128
+block return-rst in proto tcp from any to any flags S

@@ -1,0 +1,7 @@
+Listing 11-1. Router Advertisements Without Stateless Address Autoconfiguration
+!
+interface Ethernet0
+ ipv6 address 2001:DB8:31:3::/64 eui-64
+ ipv6 enable
+ ipv6 nd prefix 2001:DB8:31:3::/64 no-autoconfig
+!

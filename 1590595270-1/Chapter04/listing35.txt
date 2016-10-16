@@ -1,0 +1,9 @@
+Listing 4-35. An iBGP Route
+bgpd-t# show bgp ipv6 2001:db8:31::/48
+BGP routing table entry for 2001:db8:31::/48
+Paths: (1 available, best #1, table Default-IP-Routing-Table)
+  Not advertised to any peer
+  65200
+    3ffe:9500:3C:74::10 from 172.16.1.6 (10.0.0.10)
+      Origin IGP, metric 0, localpref 100, valid, internal, best
+      Last update: Tue Feb 15 00:02:42 2005

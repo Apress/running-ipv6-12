@@ -1,0 +1,3 @@
+Listing 3-3. Enabling 6to4
+# ifconfig stf0 inet6 2002:dfe0:e1e2:1::1/16
+# route add -inet6 default 2002:c058:6301::

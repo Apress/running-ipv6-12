@@ -1,0 +1,12 @@
+Listing 9-5. Filtering with ip6fw
+% sudo ip6fw -q add unreach admin tcp from any to any 25 out
+% sudo ip6fw -q add deny ipv6 from 2001:db8::/32 to any
+% sudo ip6fw -q add deny ipv6-icmp from any to ff02::1 in icmptype 128
+% sudo ip6fw -q add deny tcp from any to any setup in
+% sudo ip6fw list
+00100 unreach admin tcp from any to any 25 out
+00200 deny ipv6 from 2001:db8::/32 to any
+00300 deny ipv6-icmp from any to ff02::1 in icmptype 128
+00400 deny tcp from any to any in setup
+65535 allow ipv6 from any to any
+% sudo ip6fw delete 100

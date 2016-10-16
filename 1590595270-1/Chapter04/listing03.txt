@@ -1,0 +1,7 @@
+Listing 4-3. Enabling traceroute and PMTUD ICMP messages
+netsh interface ipv6>firewall
+netsh firewall>set icmpsetting type=11 mode=enable
+Ok.
+
+netsh firewall>set icmpsetting 2 enable
+Ok.

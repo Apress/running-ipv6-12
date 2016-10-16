@@ -1,0 +1,9 @@
+Listing 9-3. Downloading and installing ip6tables
+# service iptables stop
+# chkconfig iptables off
+# wget http://download.fedoralegacy.org/redhat/9/updates/i386/iptables-ipv6-1.2.8-8.90.1.legacy.i386.rpm
+# wget http://download.fedoralegacy.org/redhat/9/updates/i386/iptables-1.2.8-8.90.1.legacy.i386.rpm
+# rpm --upgrade iptables-1.2.8-8.90.1.legacy.i386.rpm
+# rpm --install iptables-ipv6-1.2.8-8.90.1.legacy.i386.rpm 
+# service ip6tables start
+# chkconfig --level 345 ip6tables on

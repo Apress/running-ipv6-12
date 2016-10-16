@@ -1,0 +1,15 @@
+Listing 2-6. The Windows XP ping6 Command
+C:\>ping6 www.hitachi.co.jp
+
+Pinging www.hitachi.co.jp [2001:240:400::101]
+from 2001:db8:1dde:1:59eb:57:32ff:b6f4 with 32 bytes of data:
+
+Reply from 2001:240:400::101: bytes=32 time=395ms
+Reply from 2001:240:400::101: bytes=32 time=396ms
+Reply from 2001:240:400::101: bytes=32 time=398ms
+Reply from 2001:240:400::101: bytes=32 time=397ms
+
+Ping statistics for 2001:240:400::101:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 395ms, Maximum = 398ms, Average = 396ms

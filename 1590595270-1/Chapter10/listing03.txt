@@ -1,0 +1,5 @@
+Listing 10-3. Decoding a Neighbor Discovery Exchange
+# tcpdump -v -s 0 -e
+tcpdump: listening on eth0
+15:02:27.471601 0:a:95:f5:24:6e 33:33:ff:29:23:b6 ip6 86: host3.example.com > ff02::1:ff29:23b6: icmp6: neighbor sol: who has host5.example.com(src lladdr: 00:0a:95:f5:24:6e) (len 32, hlim 255)
+15:02:27.471708 0:1:2:29:23:b6 0:a:95:f5:24:6e ip6 86: host5.example.com > host3.example.com: icmp6: neighbor adv: tgt is host5.example.com(SO)(tgt lladdr: 00:01:02:29:23:b6) (len 32, hlim 255)

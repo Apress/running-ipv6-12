@@ -1,0 +1,13 @@
+Listing 7-3. Configuring Apache to Be a Proxy
+LoadModule  proxy_module          modules/mod_proxy.so
+LoadModule  proxy_http_module     modules/mod_proxy_http.so
+LoadModule  proxy_ftp_module      modules/mod_proxy_ftp.so
+LoadModule  proxy_connect_module  modules/mod_proxy_connect.so
+LoadModule  auth_digest_module    modules/mod_auth_digest.so
+ 
+ProxyRequests On
+
+<Proxy *>
+  Order allow,deny
+  Allow from 2001:db8::/32 192.0.2.0/24 example.com
+</Proxy>

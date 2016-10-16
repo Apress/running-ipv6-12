@@ -1,0 +1,7 @@
+Listing 9-8. PF Filter Rules
+pass all
+unroutable="{ 2001:db8::/32 192.0.2.0/24 }"
+block in from $unroutable to any
+block out proto tcp from any to any port = 25
+block in proto icmp6 from any to ff02::1 icmp6-type echoreq
+block return-rst in proto tcp from any to any flags S/SA

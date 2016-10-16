@@ -1,0 +1,6 @@
+Listing 5-3. A6 Records in the DNS
+www          IN  A6  64  ::0000:0000:0000:0390  subnet-a
+subnet-a     IN  A6  48  0000:0000:0000:c001::  prefix-isp1
+subnet-a     IN  A6  48  0000:0000:0000:c001::  prefix-isp2
+prefix-isp1  IN  A6  0   2001:0db8:1bff::
+prefix-isp2  IN  A6  0   3ffe:9500:003c::

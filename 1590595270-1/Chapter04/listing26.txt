@@ -1,0 +1,8 @@
+Listing 4-26. Enabling Redistribution in OSPF
+!
+ipv6 router ospf 230
+ log-adjacency-changes
+ default-information originate
+ redistribute connected
+ redistribute static
+!

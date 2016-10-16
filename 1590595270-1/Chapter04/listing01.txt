@@ -1,0 +1,13 @@
+Listing 4-1. Listing IPv6 Interfaces
+C:\>netsh interface ipv6 show interface
+Querying active state...
+
+Idx  Met   MTU    State         Name
+---  ----  -----  ------------  -----
+  7     1   1280  Connected     tun0
+  6     2   1280  Disconnected  Teredo Tunneling Pseudo-Interface
+  5     0   1500  Connected     Local Area Connection 3
+  4     0   1500  Disconnected  Bluetooth Network
+  3     1   1280  Connected     6to4 Pseudo-Interface
+  2     1   1280  Connected     Automatic Tunneling Pseudo-Interface
+  1     0   1500  Connected     Loopback Pseudo-Interface

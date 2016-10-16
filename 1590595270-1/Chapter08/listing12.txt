@@ -1,0 +1,18 @@
+Listing 8-12. Listing Multicast Addresses on FreeBSD or MacOS
+> netstat -ia
+Name    Mtu Network       Address              Ipkts Ierrs    Opkts Oerrs  Coll
+xl0    1500 <Link#1>    00:01:02:29:26:40   681428     0   169451     0     0
+                        33:33:5b:81:52:75
+                        33:33:00:00:00:01
+                        33:33:ff:29:26:40
+                        01:00:5e:00:00:01
+xl0    1500 192.0.2.65/24  sequoia           154437     -   164922     -     -
+                        ALL-SYSTEMS.MCAST.NET
+xl0    1500 fe80:1::201 fe80:1::201:2ff:f     1359     -     2389     -     -
+                        ff02:1::2:5b81:5275(refs: 1)
+                        ff02:1::1          (refs: 1)
+                        ff02:1::1:ff29:2640(refs: 1)
+xl0    1500 2001:db8:31 2001:db8:31:2:201:2  33034     -     2866     -     -
+                        ff02:1::2:5b81:5275(refs: 1)
+                        ff02:1::1          (refs: 1)
+                        ff02:1::1:ff29:2640(refs: 1)

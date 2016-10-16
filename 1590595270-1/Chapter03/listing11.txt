@@ -1,0 +1,14 @@
+Listing 3-11. Creating and Configuring a Manual Tunnel
+C:\>netsh
+netsh>interface ipv6
+netsh interface ipv6>add v6v4tunnel interface=tun0 localaddress=192.0.2.1 remoteaddress=223.224.225.226
+netsh interface ipv6>add address interface=tun0 address=2001:db8:31:1::2
+Ok.
+
+netsh interface ipv6>add route prefix=2001:db8:31:1::/64 interface=tun0
+Ok.
+
+netsh interface ipv6>add route prefix=::/0 interface=tun0 nexthop=2001:db8:31:1::1
+Ok.
+
+netsh interface ipv6>quit

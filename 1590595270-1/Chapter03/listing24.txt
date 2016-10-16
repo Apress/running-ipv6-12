@@ -1,0 +1,8 @@
+Listing 3-24. The Contents of /etc/sysconfig/network-scripts/ifcfg-sit1
+DEVICE=sit1
+BOOTPROTO=none
+ONBOOT=yes
+IPV6INIT=yes
+IPV6TUNNELIPV4=192.0.2.1
+IPV6TUNNELIPV4LOCAL=223.224.225.226
+IPV6ADDR=2001:db8:31:1::2

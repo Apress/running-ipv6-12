@@ -1,0 +1,4 @@
+Listing 4-5. Enabling IPv6 Routing Under MacOS
+ifconfig en0 inet6 2001:db8:31:2::1/64
+sysctl -w net.inet6.ip6.forwarding=1
+rtadvd en0

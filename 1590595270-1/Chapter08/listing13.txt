@@ -1,0 +1,2 @@
+Listing 8-13. Starting a PPP Session
+sudo /usr/sbin/pppd /dev/tty.USA19H3b1P1.1 38400 noauth local passive persist silent ipv6 ::2005

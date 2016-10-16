@@ -1,0 +1,12 @@
+Listing 9-1. Finding IPv6 Systems on the Local Subnet with a Multicast Ping
+# ping6 -I eth0 -c 2 ff02::1
+PING ff02::1(ff02::1) from fe80::201:2ff:fe29:23b6 eth0: 56 data bytes
+64 bytes from ::1: icmp_seq=1 ttl=64 time=0.078 ms
+64 bytes from fe80::20a:95ff:fecd:987a: icmp_seq=1 ttl=64 time=0.366 ms (DUP!)
+64 bytes from fe80::204:27ff:fefe:249f: icmp_seq=1 ttl=64 time=2.07 ms (DUP!)
+64 bytes from fe80::20a:95ff:fef5:246e: icmp_seq=1 ttl=64 time=82.7 ms (DUP!)
+64 bytes from ::1: icmp_seq=2 ttl=64 time=0.076 ms
+                                                                                
+--- ff02::1 ping statistics ---
+2 packets transmitted, 2 received, +3 duplicates, 0% packet loss, time 1006ms
+rtt min/avg/max/mdev = 0.076/17.066/82.734/32.842 ms

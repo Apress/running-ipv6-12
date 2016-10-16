@@ -1,0 +1,4 @@
+Listing 3-22. Removing a Default Route and a Manual Tunnel Under Linux
+ip route delete default via 2001:db8:31:1::1
+ip address del 2001:db8:31:1::2/64 dev tun0
+ip tunnel del name tun0

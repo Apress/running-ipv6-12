@@ -1,0 +1,5 @@
+Listing 7-2. Building Apache with Proxy Support
+make clean
+./configure --enable-so --enable-ssl --enable-mods-shared="proxy proxy_http proxy_ftp proxy_connect auth_digest" 
+make
+make install

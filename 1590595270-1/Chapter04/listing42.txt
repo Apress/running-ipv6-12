@@ -1,0 +1,18 @@
+Listing 4-42. The routing-options Part of a Juniper Configuration
+routing-options {
+    rib inet6.0 {
+        static {
+            route 2001:db8:31::/48 {
+                discard;
+                install;
+                readvertise;
+            }
+            route 2001:db8:31:3000::/52 {
+                next-hop 2001:db8:31:3::2;
+                install;
+            }
+        }
+    }
+    router-id 192.0.2.7;
+    autonomous-system 65500;
+}

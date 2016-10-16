@@ -1,0 +1,5 @@
+Listing 8-9. A Cisco Router as a DHCPv6 Relay
+!
+interface Ethernet0
+ ipv6 dhcp relay destination 2001:db8:31:2::547
+!

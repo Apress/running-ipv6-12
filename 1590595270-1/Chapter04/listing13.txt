@@ -1,0 +1,7 @@
+Listing 4-13. A Static Route Under Linux
+# route --inet6 add 2001:db8:31:c03::/64 gw 2001:db8:31:2::abf
+# route --inet6
+Kernel IPv6 routing table
+Destination           Next Hop            Flags Metric Ref Use Iface
+2001:db8:31:c03::/64  2001:db8:31:2::abf  UG    1      0     0 eth0
+# route --inet6 delete 2001:db8:31:c03::/64 gw 2001:db8:31:2::abf

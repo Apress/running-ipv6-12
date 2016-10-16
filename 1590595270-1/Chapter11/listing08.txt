@@ -1,0 +1,8 @@
+Listing 11-8. A Private 6to4 Gateway in the IPv6-to-6to4 Direction
+!
+interface Tunnel2002
+ ipv6 address 2002:DFE0:E1E2::/16
+ ipv6 mtu 1280
+ tunnel source 223.224.225.226
+ tunnel mode ipv6ip 6to4
+!

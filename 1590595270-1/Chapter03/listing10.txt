@@ -1,0 +1,14 @@
+Listing 3-10. Monitoring 6to4 Under Red Hat 9 Linux
+# ip -6 route
+::/96 via :: dev tun6to4  metric 256  mtu 1480 advmss 1420
+unreachable ::/96 dev lo  metric 1024  error -101 mtu 16436 advmss 16376
+unreachable ::ffff:0.0.0.0/96 dev lo  metric 1024  error -101 mtu 16436 advmss 16376
+unreachable 2002:a00::/24 dev lo  metric 1024  error -101 mtu 16436 advmss 16376
+unreachable 2002:7f00::/24 dev lo  metric 1024  error -101 mtu 16436 advmss 16376
+unreachable 2002:a9fe::/32 dev lo  metric 1024  error -101 mtu 16436 advmss 16376
+unreachable 2002:ac10::/28 dev lo  metric 1024  error -101 mtu 16436 advmss 16376
+unreachable 2002:c0a8::/32 dev lo  metric 1024  error -101 mtu 16436 advmss 16376
+unreachable 2002:e000::/19 dev lo  metric 1024  error -101 mtu 16436 advmss 16376
+2002::/16 dev tun6to4  proto kernel  metric 256  mtu 1480 advmss 1420
+unreachable 3ffe:ffff::/32 dev lo  metric 1024  error -101 mtu 16436 advmss 16376
+default via ::192.88.99.1 dev tun6to4  metric 1024  mtu 1480 advmss 1420

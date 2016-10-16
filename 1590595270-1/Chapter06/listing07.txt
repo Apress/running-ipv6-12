@@ -1,0 +1,5 @@
+Listing 6-7. Enabling POP3 and IMAP in /etc/inetd.conf
+pop3   stream  tcp    nowait  root  /usr/local/libexec/ipop3d  ipop3d
+pop3   stream  tcp6   nowait  root  /usr/local/libexec/ipop3d  ipop3d
+imap4  stream  tcp    nowait  root  /usr/local/libexec/imapd   imapd
+imaps  stream  tcp46  nowait  root  /usr/local/libexec/imapd   imapd

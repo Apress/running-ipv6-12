@@ -1,0 +1,6 @@
+Listing 5-10. Checking a Zone and Configuration Files and Reloading named
+# named-checkzone example.com /var/named/example.com
+zone example.com/IN: loaded serial 2005020900
+OK
+# named-checkconf
+# rndc reload

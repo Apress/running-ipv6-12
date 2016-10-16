@@ -1,0 +1,11 @@
+Listing 8-10. A Cisco Router as a DHCPv6 Server
+!
+ipv6 dhcp pool dhcpv6-pool
+ prefix-delegation 2001:DB8:AA5E::/48 00030001000427FEAA5E lifetime 7200 900
+ prefix-delegation 2001:DB8:246E::/48 00030001000427FE246E
+ dns-server 2001:db8:31:2::53
+ domain-name example.com
+!
+interface Ethernet0
+ ipv6 dhcp server dhcpv6-pool
+!

@@ -1,0 +1,8 @@
+Listing 9-2. A hosts.allow file
+# wrap inetd daytime service
+daytime : .example.com : deny
+daytime : 10.53.64.0/255.255.192.0, [2001:db8:31:2::53] : allow
+# The rest of the daemons are protected.
+ALL : ALL \
+        : severity auth.info \
+        : twist /bin/echo "You are not welcome to use %d from %h."

@@ -1,0 +1,7 @@
+Listing 5-15. Remapping ip6.int to ip6.arpa Using a DNAME Record
+$TTL 86400
+
+@   IN  SOA ns1.example.com. root.example.com. ( 2005020900 28800 7200 604800 86400 )
+        IN  NS      ns1.example.com.
+
+@       IN  DNAME   ip6.arpa.

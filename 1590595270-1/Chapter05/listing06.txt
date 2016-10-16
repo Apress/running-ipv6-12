@@ -1,0 +1,7 @@
+Listing 5-6. Reverse Mapping with DNAME and Bitlabels
+\[x20010DB81BFF/48].ip6.arpa.                   IN  DNAME  rev.example.com.
+
+\[xC001/16].rev.example.com                     IN  DNAME  srvrs.rev.example.com.
+
+\[x0000000000000390/64].srvrs.rev.example.com.  IN  PTR    www.example.com.
+www.example.com.                                IN  AAAA   2001:db8:1bff:c001::390

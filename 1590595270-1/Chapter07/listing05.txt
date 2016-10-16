@@ -1,0 +1,5 @@
+Listing 7-5. Creating Users for Digest Authentication
+# /usr/local/apache2/bin/htdigest /etc/proxypasswd.digest proxy iljitsch
+Adding user iljitsch in realm proxy
+New password: 
+Re-type new password: 

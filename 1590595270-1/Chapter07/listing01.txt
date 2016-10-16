@@ -1,0 +1,24 @@
+Listing 7-1. An IPv6 Deployment Plan for an ISP
+Phase Month Milestone
+1     1     Get IPv6 tunnel
+            Enable IPv6 on spare Windows XP office PC and test FreeBSD server
+      3     Set up OSPFv3 routing in the lab
+
+2     6     Obtain IPv6 allocation from Regional Internet Registry
+            Set up IPv6 BGP session with transit ISP A
+            Enable IPv6 on NOC workstations and NS2 nameserver
+      9     Register NS2 IPv6 address with TLD registries
+            Set up IPv6 BGP session with transit ISP B
+            Set up IPv6 BGP sessions with internet exchange peers
+            IPv6 training for NOC personnel
+      12    Set up experimental tunnel server for customers
+      15    Upgrade all routers to IPv6, install OSPFv3 and IPv6 over iBGP
+      18    Enable IPv6 on proxy server, make proxy software IPv6-aware
+
+3     21    Add support for native IPv6 to DSL infrastructure
+      24    Add IPv6 support to provisioning system
+      27    Evaluate possibilities for IPv6 load balancing on WWW cluster
+      30    Enable IPv6 on all servers
+            Make SMTP, POP, and IMAP servers IPv6-aware
+      33    Implement IPv6 WWW cluster load balancing
+            IPv6 training for support personnel

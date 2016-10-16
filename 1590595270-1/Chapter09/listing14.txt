@@ -1,0 +1,9 @@
+Listing 9-14. Filtering IPv6 Telnet Access to a Cisco Router
+!
+ipv6 access-list manage-ipv6
+ permit ipv6 2001:db8:31::/48 any
+!
+line vty 0 4
+ ipv6 access-class manage-ipv6 in
+ transport input telnet
+!

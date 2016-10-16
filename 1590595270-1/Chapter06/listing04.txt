@@ -1,0 +1,14 @@
+Listing 6-4. Name-Based Virtual Hosts with Apache
+NameVirtualHost *
+
+<VirtualHost *>
+ServerName www.example.com
+ServerAlias www.ipv4.example.com www.ipv6.example.com
+DocumentRoot /usr/local/www/data/
+</VirtualHost>
+
+<VirtualHost *>
+ServerName www.beispiel.de
+ServerAlias *.beispiel.de *.beispiel.au
+DocumentRoot /usr/local/www/data/beispiel/
+</VirtualHost>

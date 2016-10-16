@@ -1,0 +1,4 @@
+Listing 3-16. Removing Tunnel Settings and a Tunnel Interface
+# ifconfig gif0 inet6 delete 2001:600:8:34::2
+# ifconfig gif0 deletetunnel
+# ifconfig gif0 destroy

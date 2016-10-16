@@ -1,0 +1,9 @@
+Listing 3-8. Enabling 6to4 on a Cisco Router
+!
+interface Tunnel2002
+ ipv6 address 2002:dfe0:e1e2:1::1/16
+ tunnel source 223.224.225.226
+ tunnel mode ipv6ip 6to4
+!
+ipv6 route ::/0 2002:c058:6301::
+!

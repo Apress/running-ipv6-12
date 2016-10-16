@@ -1,0 +1,12 @@
+Listing 4-37. Changing Global and Link-Local Next Hop Addresses
+!
+router bgp 65500
+ neighbor 3ffe:9500:3C:74::10 remote-as 65200
+ !
+ address-family ipv6
+ neighbor 3ffe:9500:3C:74::10 route-map setnexthop in
+ exit-address-family
+!
+route-map setnexthop permit 10
+ set ipv6 next-hop 2001:DB8:31:2::1 FE80::290:6902:EE02:E43E
+!

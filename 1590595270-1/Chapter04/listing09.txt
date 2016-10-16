@@ -1,0 +1,6 @@
+Listing 4-9. An rtadvd Configuration File
+interface eth0
+  {
+    AdvSendAdvert on;
+    prefix 2001:db8:31:2::/64 { };
+  };

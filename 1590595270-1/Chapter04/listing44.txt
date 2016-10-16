@@ -1,0 +1,42 @@
+Listing 4-44. The policy-options Part of a Juniper Configuration
+policy-options {
+    policy-statement import-v6 {
+        term 1 {
+            from {
+                route-filter 2001:16F8::/32 orlonger;
+            }
+            then accept;
+        }
+        then reject;
+    }
+    policy-statement bgp-v6-in {
+        term 1 {
+            from policy import-v6;
+            then reject;
+        }
+        then {
+            local-preference 300;
+            accept;
+        }
+    }
+    policy-statement bgp-v6-out {
+        term 1 {
+            from {
+                route-filter 2001:db8:31:/48 exact;
+            }
+            then accept;
+        }
+        then reject;
+    }
+    policy-statement redist-ospf3 {
+        term connected {
+            from protocol direct;
+            then accept;
+        }
+        term static {
+            from protocol static;
+            then accept;
+        }
+    }
+}
+

@@ -1,0 +1,5 @@
+Listing 6-1. The Listen Statement in the Apache Configuration
+# Standard HTTP port:
+Listen 80
+# HTTPS HTTP over SSL port:
+Listen 443

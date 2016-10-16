@@ -1,0 +1,10 @@
+Listing 4-29. Enabling OSPFv3 Under Zebra
+!
+interface xl0
+ ipv6 ospf6 cost 10
+!
+router ospf6
+ router-id 192.0.2.18
+ redistribute static
+ interface xl0 area 0.0.0.0
+!

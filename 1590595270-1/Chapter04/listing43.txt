@@ -1,0 +1,35 @@
+Listing 4-43. The protocols Part of a Juniper Configuration
+protocols {
+    bgp {
+        group ibgp {
+            type internal;
+            local-address 192.0.2.7;
+            family inet {
+                unicast;
+            }
+            family inet6 {
+                unicast;
+            }
+            peer-as 65500;
+            neighbor 192.0.2.18;
+        }           
+        group bgp-v6 {
+            type external;
+            import bgp-v6-in;
+            family inet6 {
+                unicast;
+            }
+            export bgp-v6-out;
+            neighbor 2001:7f8:1::a506:3000:1 {
+                authentication-key "$9$5Fdsikekasi/97dj"; ## SECRET-DATA
+                peer-as 64900;
+            }
+        }
+    ospf3 {
+        export redist-ospf3;
+        area 0.0.0.0 {
+            interface lo0.0;
+            interface ge-0/2/0.288;
+        }
+    }
+}

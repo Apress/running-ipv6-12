@@ -1,0 +1,9 @@
+Listing 7-4. Limiting Proxy Access with a Login and Password
+<Proxy *>
+  order allow,deny
+  allow from all
+  authname proxy
+  authdigestfile /etc/proxypasswd.digest
+  authtype digest
+  require valid-user
+</Proxy>

@@ -1,0 +1,2 @@
+Listing 4-6. Filtering Out Incoming Router Advertisements
+ip6fw add 65000 drop ipv6-icmp from any to any icmptypes 134 in

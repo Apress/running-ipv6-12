@@ -1,0 +1,14 @@
+Listing 9-13. Stateful Filtering with a Reflexive Access List
+!
+no ipv6 access-list out-ipv6-acl
+no ipv6 access-list in-ipv6-acl
+!
+ipv6 access-list out-ipv6-acl
+ permit tcp any any eq 22 reflect state-acl timeout 7500
+ permit ipv6 any any reflect state-acl
+!
+ipv6 access-list in-ipv6-acl
+ evaluate state-acl
+ deny tcp any any log-input
+ deny udp any any log-input
+!

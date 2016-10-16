@@ -1,0 +1,17 @@
+Listing 4-32. A Simple IPv6 BGP Setup
+!
+router bgp 65500
+ bgp log-neighbor-changes
+ neighbor 3ffe:9500:3C:74::10 remote-as 64900
+ no neighbor 3ffe:9500:3C:74::10 activate
+ !
+ address-family ipv6
+ neighbor 3ffe:9500:3C:74::10 activate
+ neighbor 3ffe:9500:3C:74::10 prefix-list outfilter-ipv6 out
+ network 2001:DB8:31::/48
+ no synchronization
+ exit-address-family
+!
+ipv6 prefix-list outfilter-ipv6 seq 5 permit 2001:DB8:31::/48
+ipv6 route 2001:DB8:31::/48 Null0
+!

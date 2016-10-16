@@ -1,0 +1,9 @@
+Listing 2-4. Using ifconfig to Monitor IPv6 Addresses on MacOS
+% ifconfig en1
+en1: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        inet6 fe80::20a:95ff:fef5:246e prefixlen 64 scopeid 0x5 
+        inet6 2001:db8:1dde:1:20a:95ff:fef5:246e prefixlen 64 autoconf 
+        inet 172.31.0.20 netmask 0xffffff00 broadcast 172.31.0.255
+        ether 00:0a:95:f5:24:6e 
+        media: autoselect status: active
+        supported media: autoselect

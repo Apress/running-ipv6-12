@@ -1,0 +1,11 @@
+Listing 10-16. Fragmentation Under Linux
+# ping6 -c 1 -s 1300 www.kame.net
+PING www.kame.net(orange.kame.net) 1300 data bytes
+From 2001:288:3b0::55 icmp_seq=1 Packet too big: mtu=1280
+ 
+--- www.kame.net ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+ 
+# ip -6 route get 2001:200:0:8002:203:47ff:fea5:3085
+2001:200:0:8002:203:47ff:fea5:3085 via fe80::204:27ff:fefe:249f dev eth0  src 2001:db8:31:2:201:2ff:fe29:23b6  metric 0
+    cache  expires 587sec mtu 1280 advmss 1440

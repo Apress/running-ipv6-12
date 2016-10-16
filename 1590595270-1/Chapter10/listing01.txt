@@ -1,0 +1,7 @@
+Listing 10-1. Intercepting a Router Advertisement Message
+# tcpdump
+tcpdump: listening on eth0
+13:33:33.436664 fe80::204:27ff:fefe:249f > ff02::1: icmp6: router advertisement [class 0xe0]
+
+1 packets received by filter
+0 packets dropped by kernel

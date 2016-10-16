@@ -1,0 +1,4 @@
+Listing 10-13. Listing Information for an Interface with ndp
+% ndp -i xl0
+linkmtu=1500, curhlim=64, basereachable=30s0ms, reachable=40s, retrans=1s0ms
+Flags: nud accept_rtadv

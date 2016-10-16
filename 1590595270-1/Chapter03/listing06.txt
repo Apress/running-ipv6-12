@@ -1,0 +1,10 @@
+Listing3-6. Output of the netstat command
+# netstat -rn --inet6
+Kernel IPv6 routing table
+Destination             Next Hop          Flags Metric Ref Use Iface
+::1/128                 ::                U     0      0   0 lo
+::/96                   ::                U     256    0   0 tun6to4
+2002:dfe0:e1e2:1::1/128 ::                U     0      0   0 lo
+2002::/16               ::                UA    256    0   0 tun6to4
+::/0                    ::                UDA   256    0   0 eth0
+2000::/3                ::192.88.99.1     UG    1      0   0 tun6to4

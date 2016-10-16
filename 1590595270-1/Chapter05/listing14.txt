@@ -1,0 +1,10 @@
+Listing 5-14. Fake RFC 1886 and 2874 Zones in named.conf
+zone "\[x2/3].ip6.arpa." {
+  type master;
+  file "bitlabel.ip6.arpa";
+};
+
+zone "ip6.int." {
+  type master;
+  file "ip6.int";
+};

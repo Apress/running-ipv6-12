@@ -1,0 +1,4 @@
+Listing 3-17. Setting Up a Default Route Toward a Tunnel
+# route add -inet6 default 2001:db8:31:1::1
+# netstat -rnf inet6
+Routing tables

@@ -1,0 +1,9 @@
+Listing 8-11. A Cisco Router as a DHCPv6 Prefix Delegation Client
+!
+interface Ethernet1
+ ipv6 address autoconfig
+ ipv6 dhcp client pd dhcpv6prefix
+!
+interface Ethernet2
+ ipv6 address dhcpv6prefix 0:0:0:A0::/64 eui-64
+!

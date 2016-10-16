@@ -1,0 +1,11 @@
+Listing 3-25. Configuring a Tunnel Interface and an IPv6 Default Route Under Cisco IOS
+!
+interface Tunnel0
+ ipv6 address 2001:DB8:31:1::2/64
+ ipv6 enable
+ tunnel source 192.0.2.1
+ tunnel destination 223.224.225.226
+ tunnel mode ipv6ip
+!
+ipv6 route ::/0 2001:DB8:31:1::1
+!

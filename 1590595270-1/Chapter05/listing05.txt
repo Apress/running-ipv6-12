@@ -1,0 +1,5 @@
+Listing 5-5. Bitlabels in zone files
+\[xf0d2b496785a3c1e]                IN  PTR  www.example.com.
+\[b1111000011010010101101001001011001111000010110100011110000011110] IN PTR www.example.com.
+\[o7415126445474132170170/64]       IN  PTR  www.example.com.
+\[120.90.60.30].\[240.210.180.150]  IN  PTR  www.example.com.

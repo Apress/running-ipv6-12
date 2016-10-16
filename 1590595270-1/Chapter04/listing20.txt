@@ -1,0 +1,25 @@
+Listing 4-20. Cisco Express Forwarding for IPv6
+RouterE#show ipv6 cef
+%IPv6 CEF not running
+RouterE#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+RouterE(config)#ipv6 cef
+%Must enable IPv4 CEF first
+RouterE(config)#ip cef  
+RouterE(config)#ipv6 cef
+RouterE(config)#^Z
+RouterE#show ipv6 cef
+2001:DB8:31:2:260:70FF:FE35:AA5E/128
+  Receive
+2001:DB8:31:2::/64
+     attached to Ethernet0 
+2001:DB8:31:1::2/128
+  Receive
+2001:DB8:31:1::/64
+     attached to Tunnel0 
+FE80::/10
+  Receive
+FF00::/8
+  Receive
+::/0
+     attached to Tunnel0

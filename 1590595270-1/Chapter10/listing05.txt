@@ -1,0 +1,4 @@
+Listing 10-5. More Verbose tcpdump Output and Capturing Full Packets
+# tcpdump -v -s 0
+13:06:07.693110 host5.example.com.32775 > ns.example.com.domain: [udp sum ok] 65043+ AAAA? ns.example.com. (32) (len 40, hlim 64)
+13:06:07.710238 ns.example.com.domain > host5.example.com.32775: [udp sum ok] 65043* 1/2/2 ns.example.com. AAAA 2001:db8:31:53::53 (148) (len 156, hlim 60)

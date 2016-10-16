@@ -1,0 +1,4 @@
+Listing 3-19. Creating a Manual Tunnel Under Linux
+# ip tunnel add name tun0 mode sit local 192.0.2.1 remote 223.224.225.226 ttl 64
+# ip link set dev tun0 up
+# ip address add 2001:db8:31:1::2/64 dev tun0

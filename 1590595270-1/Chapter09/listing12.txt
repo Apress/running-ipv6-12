@@ -1,0 +1,15 @@
+Listing 9-12. Removing an Access List Line
+Router#show running-config | begin ipv6 access-list out-ipv6-acl
+ipv6 access-list out-ipv6-acl
+ deny tcp any any eq smtp
+ permit ipv6 any any
+!
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#ipv6 access-list out-ipv6-acl
+Router(config-ipv6-acl)#no deny tcp any any eq 25
+Router(config-ipv6-acl)#^Z
+Router#show running-config | begin ipv6 access-list out-ipv6-acl
+ipv6 access-list out-ipv6-acl
+ sequence 20 permit ipv6 any any
+!

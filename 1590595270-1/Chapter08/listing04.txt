@@ -1,0 +1,8 @@
+Listing 8-4. Displaying the FreeBSD Address Policy Table with ip6addrctl
+# ip6addrctl show
+Prefix                          Prec Label      Use
+::1/128                           50     0        0
+::/0                              40     1     8892
+2002::/16                         30     2        0
+::/96                             20     3        0
+::ffff:0.0.0.0/96                 10     4        0

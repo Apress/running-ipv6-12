@@ -1,0 +1,25 @@
+Listing 4-40. Lowering the Preference for Tunneled Destinations
+!
+router bgp 65500
+ neighbor 2001:7f8:1::a506:3000:1 remote-as 64900
+ neighbor 3ffe:9500:3C:74::10 remote-as 65200
+!
+ address-family ipv6
+ neighbor 2001:7f8:1::a506:3000:1 activate
+ neighbor 2001:7f8:1::a506:3000:1 route-map punish-tun in
+ neighbor 3ffe:9500:3C:74::10 activate
+ neighbor 3ffe:9500:3C:74::10 route-map punish-tun in
+ neighbor 3ffe:9500:3C:74::10 route-map prepend2 out
+!
+ip as-path access-list 66 permit _64512_
+ip as-path access-list 66 permit _64999_
+!
+route-map punish-tun permit 10
+ match as-path 66
+ set local-preference 66
+!
+route-map punish-tun permit 20
+!
+route-map prepend2 permit 10
+ set as-path prepend 65500 65500
+!

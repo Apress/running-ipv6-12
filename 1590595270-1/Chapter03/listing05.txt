@@ -1,0 +1,5 @@
+Listing 3-5. Enabling 6to4 in /etc/rc.conf
+stf_interface_ipv4addr="223.224.225.226"
+stf_interface_ipv6_ifid="0:0:0:1"
+stf_interface_ipv6_slaid="0"
+ipv6_defaultrouter="2002:c058:6301::"

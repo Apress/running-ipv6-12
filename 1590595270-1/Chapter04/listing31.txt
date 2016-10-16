@@ -1,0 +1,14 @@
+Listing 4-31. A Simple IPv4 BGP Setup
+!
+router bgp 65500
+ no synchronization
+ bgp log-neighbor-changes
+ network 192.0.2.0
+ neighbor 172.16.1.242 remote-as 65500
+ neighbor 172.16.1.242 prefix-list outfilter out
+ no auto-summary
+!
+ip route 192.0.2.0 255.255.255.0 Null0
+!
+ip prefix-list outfilter seq 5 permit 192.0.2.0/24
+!

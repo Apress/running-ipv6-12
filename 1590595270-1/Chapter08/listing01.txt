@@ -1,0 +1,7 @@
+Listing 8-1. Installing a New Prefix and Deprecating an Old One
+!
+interface Ethernet0
+ ipv6 address 2001:db8:4500:17c::/64 eui-64
+ ipv6 address 2001:db8:31:2::/64 eui-64
+ ipv6 nd prefix 2001:db8:31:2::/64 infinite 0
+!

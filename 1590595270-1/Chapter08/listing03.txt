@@ -1,0 +1,6 @@
+Listing 8-3. Removing a Prefix from a Router
+!
+interface Ethernet0
+ no ipv6 address 2001:db8:31:2::/64 eui-64
+ no ipv6 nd prefix 2001:db8:31:2::/64
+!

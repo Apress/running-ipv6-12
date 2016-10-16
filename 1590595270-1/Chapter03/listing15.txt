@@ -1,0 +1,10 @@
+Listing 3-15. Configuring an IPv6 Address for a gif Interface
+# ifconfig gif0
+gif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+# ifconfig gif0 up
+# ifconfig gif0 inet6 2001:db8:31:1:: eui64
+# ifconfig gif0
+gif0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1280
+        tunnel inet 192.0.2.1 --> 223.224.225.226
+        inet6 fe80::201:2ff:fe29:2640%gif0 prefixlen 64 scopeid 0x9 
+        inet6 2001:db8:31:1:201:2ff:fe29:2640 prefixlen 64 

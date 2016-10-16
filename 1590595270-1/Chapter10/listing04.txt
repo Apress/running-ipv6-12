@@ -1,0 +1,5 @@
+Listing 10-4. Standard tcpdump Output
+# tcpdump
+tcpdump: listening on eth0
+13:12:33.935061 host5.example.com.32782 > ns.example.com.domain:  15025+ AAAA? ns.example.com. (32)
+13:12:33.948362 host5.example.com.domain > host5.example.com.32782:  15025* 1/2/2 (148)

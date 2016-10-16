@@ -1,0 +1,10 @@
+Listing 10-15. Route Cloning Under Linux
+# ping6 -c 1 www.kame.net
+PING www.kame.net(orange.kame.net) 56 data bytes
+64 bytes from orange.kame.net: icmp_seq=1 ttl=47 time=345 ms
+ 
+--- www.kame.net ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 345.453/345.453/345.453/0.000 ms
+# ip -6 route get 2001:200:0:8002:203:47ff:fea5:3085
+2001:200:0:8002:203:47ff:fea5:3085 via fe80::204:27ff:fefe:249f dev eth0  proto kernel  src 2001:db8:31:2:201:2ff:fe29:23b6 metric 1024 expires 59sec mtu 1500 advmss 1440

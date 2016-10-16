@@ -1,0 +1,16 @@
+Listing 4-10. A Static Route Under Windows
+C:\>netsh
+netsh>interface ipv6
+netsh interface ipv6>add route prefix=2001:db8:31:c03::/64 interface=5 nexthop=2001:db8:31:2::abf
+Ok.
+
+netsh interface ipv6>show routes
+Querying active state...
+
+Publish  Type     Met  Prefix                Idx  Gateway/Interface Name
+-------  ------  ----  --------------------  ---  ------------------
+no       Manual     0  2001:db8:31:c03::/64    5  2001:db8:31:2::abf
+
+netsh interface ipv6>delete route prefix=2001:db8:31:c03::/64 interface=5 nexthop=2001:db8:31:2::abf
+
+Ok.

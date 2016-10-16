@@ -1,0 +1,12 @@
+Listing 10-10. Syslog and ifconfig Output Under MacOS/FreeBSD After a DAD Failure
+% tail /var/log/system.log
+May  4 17:16:40 localhost kernel: en1: DAD detected duplicate IPv6 address 2001:0db8:0031:0002:0204:27ff:fefe:249f: NS in/out=0/1, NA in=1
+May  4 17:16:40 localhost kernel: en1: DAD complete for 2001:0db8:0031:0002:0204:27ff:fefe:249f - duplicate found
+May  4 17:16:40 localhost kernel: en1: manual intervention required
+% ifconfig en1
+en1: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        inet6 2001:db8:31:2:201:2ff:fe29:23b6 prefixlen 64 duplicated
+        inet6 fe80::230:65ff:fe24:f106 prefixlen 64 scopeid 0x5 
+        ether 00:30:65:24:f1:06 
+        media: autoselect status: active
+        supported media: autoselect

@@ -1,0 +1,18 @@
+Listing 3-1. Listing Addresses and Routes Using the netsh Command
+C:\>netsh interface ipv6 show address
+
+Interface 3: 6to4 Tunneling Pseudo-Interface
+
+Addr Type DAD State Valid Life  Pref. Life  Address
+--------  --------- ----------- ----------- -----------------------
+Other     Preferred infinite    infinite    2002:dfe0:e1e2::dfe0:e1e2
+
+C:\>netsh interface ipv6 show routes
+
+Querying active state...
+
+Publish  Type     Met  Prefix    Idx  Gateway/Interface Name
+-------  ------- ----  --------  ---  ---------------------
+yes      Manual  1191  ::/0        3  2002:836b:213c:1:e0:8f08:f020:8
+yes      Manual  1041  ::/0        3  2002:c058:6301::c058:6301
+yes      Manual  1001  2002::/16   3  6to4 Tunneling Pseudo-Interface

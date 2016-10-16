@@ -1,0 +1,11 @@
+Listing 10-8. tcpdump of a DNS Request/Reply over TCP
+% sudo tcpdump
+tcpdump: WARNING: en0: no IPv4 address assigned
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on en0, link-type EN10MB (Ethernet), capture size 96 bytes
+14:32:35.468540 host3.example.com.58231 > ns.example.com.domain: S 2265400865:2265400865(0) win 65535 <mss 1440,nop,wscale 0,nop,nop,timestamp 631301731 0>
+14:32:35.484974 ns.example.com.domain > host3.example.com.58231: S 3739752857:3739752857(0) ack 2265400866 win 57344 <mss 1220> [flowlabel 0x6c66e]
+14:32:35.485197 host3.example.com.58231 > ns.example.com.domain: . ack 1 win 65535
+14:32:35.485722 host3.example.com.58231 > ns.example.com.domain: P 1:35(34) ack 1 win 65535 45278+[|domain]
+14:32:35.503456 ns.example.com.domain > host3.example.com.58231: P 1:151(150) ack 35 win 58560 45278*[|domain] [flowlabel 0x6c6bd]
+14:32:35.507729 host3.example.com.58231 > ns.example.com.domain: F 35:35(0) ack 151 win 65535

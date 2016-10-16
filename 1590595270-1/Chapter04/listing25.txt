@@ -1,0 +1,5 @@
+Listing 4-25. OSPFv3 on a Cisco Router
+!
+interface FastEthernet2/0
+ ipv6 ospf 230 area 0.0.0.0
+!

@@ -1,0 +1,4 @@
+Listing 10-2. Decoding a Router Advertisement Message
+# tcpdump -v -s 0
+tcpdump: listening on eth0
+13:52:05.259531 fe80::204:27ff:fefe:249f > ff02::1: icmp6: router advertisement(chlim=64, pref=medium, router_ltime=1800, reachable_time=0, retrans_time=0)(src lladdr: 00:04:27:fe:24:9f)(mtu: mtu=1500)(prefix info: LA valid_ltime=2592000,preferred_ltime=604800,prefix=2001:db8:31:53:/64) [class 0xe0] (len 64, hlim 255)

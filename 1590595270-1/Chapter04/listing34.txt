@@ -1,0 +1,24 @@
+Listing 4-34. IPv6 iBGP Routes over an IPv4 TCP Session
+!
+router bgp 65500
+ neighbor rrclients peer-group
+ neighbor rrclients remote-as 65500
+ neighbor 172.16.1.5 peer-group rrclients
+ !
+ address-family ipv4
+ neighbor rrclients activate
+ neighbor rrclients route-reflector-client
+ neighbor 172.16.1.5 peer-group rrclients
+ no synchronization
+ network 192.0.2.0
+ exit-address-family
+ !
+ address-family ipv6
+ neighbor rrclients activate
+ neighbor rrclients route-reflector-client
+ neighbor 172.16.1.5 peer-group rrclients
+ neighbor 172.16.1.5 activate
+ network 2001:DB8:31::/48
+ no synchronization
+ exit-address-family
+!

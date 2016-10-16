@@ -1,0 +1,6 @@
+Listing 9-4. Filtering with ip6tables
+# ip6tables -A OUTPUT -p tcp --dport 25 -j DROP
+# ip6tables -A INPUT -s 2001:db8::/32 -j DROP
+# ip6tables -A INPUT -p icmpv6 --icmpv6-type echo-request -d ff02::1 -j DROP
+# ip6tables -I INPUT -p tcp --syn -j DROP
+# ip6tables -D OUTPUT -p tcp --dport 25 -j DROP

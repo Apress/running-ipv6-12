@@ -1,0 +1,14 @@
+Listing 4-2. Configuring Windows XP as an IPv6 Router
+C:\>netsh
+netsh>interface ipv6
+netsh interface ipv6>add address interface="local area connection 3" address=2001:db8:31:2::1
+Ok.
+
+netsh interface ipv6>add route prefix=2001:db8:31:2::/64 interface=5 publish=yes
+Ok.
+
+netsh interface ipv6>set interface interface=5 forwarding=enabled advertise=enabled
+Ok.
+
+netsh interface ipv6>set interface interface=7 forwarding=enabled
+Ok.

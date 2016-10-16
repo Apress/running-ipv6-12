@@ -1,0 +1,13 @@
+Listing 11-4. Multi-Subnet Customer Provisioning with RIPng, Customer Side
+!
+interface Ethernet0
+ ipv6 address 2001:DB8:2:100::/64 eui-64
+ ipv6 nd suppress-ra
+ ipv6 rip customer enable
+ ipv6 rip customer summary-address 2001:DB8:100::/48
+!
+ipv6 route 2001:DB8:100::/48 Null0
+!
+ipv6 router rip customer
+ redistribute static
+!

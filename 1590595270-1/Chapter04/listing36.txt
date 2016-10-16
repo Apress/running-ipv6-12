@@ -1,0 +1,10 @@
+Listing 4-36. Next Hop Addresses in the BGP and IPv6 Routing Tables
+Cisco#show bgp 
+BGP table version is 3, local router ID is 10.0.0.10
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 2001:DB8:31::/48 3ffe:9500:3C:74::10
+                                             0             0 9000 i
+Cisco#show ipv6 route
+IPv6 Routing Table - 17 entries
+B   2001:DB8:31::/48 [20/0]
+     via FE80::20A:95FF:FECD:987A, Ethernet0

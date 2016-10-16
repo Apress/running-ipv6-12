@@ -1,0 +1,31 @@
+Listing 11-5. Configuration to Have a Semi-Multihomed Customer
+!
+router bgp 40000
+ no synchronization
+ neighbor 2001:DB8:2:100::2 remote-as 50000
+ neighbor 3FFE:9500:3C:74::10 remote-as 45000
+ !
+ address-family ipv6
+ neighbor 2001:DB8:2:100::2 activate
+ neighbor 2001:DB8:2:100::2 prefix-list cust-100-bgp-in in
+ neighbor 2001:DB8:2:100::2 filter-list 12 in
+ neighbor 3FFE:9500:3C:74::10 activate
+ neighbor 3FFE:9500:3C:74::10 prefix-list import in
+ neighbor 3FFE:9500:3C:74::10 prefix-list export out
+ neighbor 3FFE:9500:3C:74::10 filter-list 2 out
+ network 2001:DB8::/32
+ exit-address-family
+!
+ip as-path access-list 2 permit ^$
+ip as-path access-list 2 permit ^50000$
+ip as-path access-list 12 permit ^50000$
+!
+ipv6 prefix-list import seq 5 permit 2001:DB8:100::/48
+ipv6 prefix-list import seq 10 deny 2001:DB8::/32 le 128
+ipv6 prefix-list import seq 15 permit ::/0 le 48
+!
+ipv6 prefix-list export seq 5 permit 2001:DB8::/32
+ipv6 prefix-list export seq 10 permit 2001:DB8:100::/48
+!
+ipv6 prefix-list cust-100-bgp-in seq 5 permit 2001:DB8:100::/48
+!

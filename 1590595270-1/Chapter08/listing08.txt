@@ -1,0 +1,4 @@
+Listing 8-8. DHCPv6 Client Script
+#!/bin/sh
+echo  >/etc/resolv.conf domain $new_domain_name
+echo >>/etc/resolv.conf nameserver $new_domain_name_servers

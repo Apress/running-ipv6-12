@@ -1,0 +1,6 @@
+Listing 4-38. Changing Next Hop Addresses Under Zebra
+!
+route-map setnexthop permit 10
+ set ipv6 next-hop local fe80::290:6902:ee02:e43e
+ set ipv6 next-hop global 2001:db8:31:2::1
+!

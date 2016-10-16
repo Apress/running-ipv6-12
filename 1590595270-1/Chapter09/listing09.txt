@@ -1,0 +1,10 @@
+Listing 9-9. Displaying PF Filter Rules
+# pfctl -s rules
+No ALTQ support in kernel
+ALTQ related functions disabled
+pass all
+block drop in inet6 from 2001:db8::/32 to any
+block drop in inet from 192.0.2.0/24 to any
+block drop out proto tcp from any to any port = smtp
+block drop in inet6 proto ipv6-icmp from any to ff02::1 icmp6-type echoreq
+block return-rst in proto tcp all flags S/SA

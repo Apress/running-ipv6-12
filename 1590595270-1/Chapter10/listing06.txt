@@ -1,0 +1,5 @@
+Listing 10-6. Even More Verbose tcpdump Output When Capturing Full Packets
+# tcpdump -vv -s 0
+tcpdump: listening on eth0
+13:07:17.811560 host5.example.com.32778 > ns.example.com.domain: [udp sum ok] 45697+ AAAA? ns.example.com. (32) (len 40, hlim 64)
+13:07:17.827372 ns.example.com.domain > host5.example.com.32778: [udp sum ok] 45697* q: AAAA? ns.example.com. 1/2/2 ns.example.com. AAAA 2001:db8:31:53::53 ns: example.com. NS ns.example.com., example.com. NS ns2.beispiel.de. ar: ns.example.com. A 192.0.2.80, ns.example.com. A6 0 2001:db8:31:53::53 (148) (len 156, hlim 60)

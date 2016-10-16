@@ -1,0 +1,5 @@
+Listing 4-4. Enabling IPv6 Routing Under FreeBSD
+ipv6_ifconfig_xl0="2001:db8:31:2:: eui64 prefixlen 64"
+ipv6_gateway_enable="YES"
+rtadvd_enable="YES"
+rtadvd_interfaces="xl0"

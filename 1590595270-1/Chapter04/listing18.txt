@@ -1,0 +1,8 @@
+Listing 4-18. Routing IPv6 on a Zebra Router
+!
+interface eth0
+ ipv6 address 2001:db8:31:2::1/64
+ no ipv6 nd suppress-ra
+!
+ipv6 route 2001:db8:31:c03::/64 2001:db8:31:2::abf
+!

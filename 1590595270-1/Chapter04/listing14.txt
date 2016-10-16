@@ -1,0 +1,7 @@
+Listing 4-14. Compiling Zebra
+# gunzip zebra-0.94.tar.gz
+# tar xvf zebra-0.94.tar
+# cd zebra-0.94
+# ./configure
+# make
+# make install

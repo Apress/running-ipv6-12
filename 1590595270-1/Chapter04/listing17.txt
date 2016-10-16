@@ -1,0 +1,9 @@
+Listing 4-17. Routing IPv6 on a Cisco Router
+!
+ipv6 unicast-routing
+!
+interface Ethernet0
+ ipv6 address 2001:db8:31:2::/64 eui-64
+!
+ipv6 route 2001:db8:31:c03::/64 2001:db8:31:2::abf
+!

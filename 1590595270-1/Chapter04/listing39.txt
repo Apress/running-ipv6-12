@@ -1,0 +1,15 @@
+Listing 4-39. Sanitizing the IPv6 Global Routing Table
+!
+router bgp 65500
+ neighbor 3ffe:9500:3C:74::10 remote-as 65200
+ !
+ address-family ipv6
+ neighbor 3ffe:9500:3C:74::10 maximum-prefix 2500 80
+ neighbor 3ffe:9500:3C:74::10 prefix-list sanitize in
+ exit-address-family
+!
+ipv6 prefix-list sanitize seq 5 permit 2001:500::/30 le 48
+ipv6 prefix-list sanitize seq 10 permit 2002::/16
+ipv6 prefix-list sanitize seq 15 permit 2000::/3 le 32
+ipv6 prefix-list sanitize seq 20 deny ::/0 le 128
+!

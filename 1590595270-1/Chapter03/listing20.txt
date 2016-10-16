@@ -1,0 +1,9 @@
+Listing 3-20. Adding a Default Route and Displaying the Routing Table with ip
+# ip route add default via 2001:db8:31:1::1 metric 15
+# ip -6 route show
+2001:db8:31:1::/64 via :: dev tun0  proto kernel  metric 256  mtu 1480 advmss 1420
+fe80::/64 dev eth0  proto kernel  metric 256  mtu 1500 advmss 1440
+fe80::/64 via :: dev tun0  proto kernel  metric 256  mtu 1480 advmss 1420
+default via 2001:db8:31:1::1 dev tun0  metric 15  mtu 1480 advmss 1420
+default dev eth0  proto kernel  metric 256  mtu 1500 advmss 1440
+unreachable default dev lo  metric -1  error -101

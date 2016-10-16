@@ -1,0 +1,60 @@
+Listing B-1. A Startup Script for the zebra and bgpd Daemons
+#!/bin/sh
+# chkconfig: 2345 60 40
+# description: Zebra is a set of routing daemons
+### BEGIN INIT INFO
+# Provides: $zebra
+### END INIT INFO
+
+# Source function library.
+. /etc/init.d/functions
+
+[ -f /usr/local/sbin/zebra ] || exit 0
+[ -f /usr/local/sbin/bgpd ] || exit 0
+
+start()
+  {
+    echo -n $"Starting zebra: "
+    daemon /usr/local/sbin/zebra -d
+    echo
+    echo -n $"Starting bgpd: "
+    daemon /usr/local/sbin/bgpd -d
+    echo
+  }
+stop()
+  {
+    echo -n $"Shutting down bgpd: "
+    killproc bgpd
+    echo
+    echo -n $"Shutting down zebra: "
+    killproc zebra
+    echo
+  }
+rhstatus()
+  {
+    status zebra
+    status bgpd
+  }
+restart()
+  {
+    stop
+    start
+  }
+
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  status)
+        rhstatus
+        ;;
+  restart|reload)
+        restart
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|status|restart}"
+        exit 1
+esac

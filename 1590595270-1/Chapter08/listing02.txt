@@ -1,0 +1,5 @@
+Listing 8-2. Setting the Valid Lifetime to Zero in Router Advertisements
+!
+interface Ethernet0
+ ipv6 nd prefix 2001:db8:31:2::/64 7200 0
+!

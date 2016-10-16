@@ -1,0 +1,6 @@
+Listing 3-18. Configuring an IPv6 Tunnel at System Startup by Using /etc/rc.conf
+cloned_interfaces="gif0"
+gif_interfaces="gif0"
+gifconfig_gif0="192.0.2.1 223.224.225.226"
+ipv6_ifconfig_gif0="2001:db8:31:1::2 prefixlen 64"
+ipv6_defaultrouter="2001:db8:31:1::1"

@@ -1,0 +1,8 @@
+Listing 6-3. Showing Listening Sockets
+> netstat -a
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address  Foreign Address  (state)
+tcp46      0      0  *.https        *.*              LISTEN
+tcp46      0      0  *.http         *.*              LISTEN
+tcp6       0      0  *.pop3         *.*              LISTEN
+tcp4       0      0  *.pop3         *.*              LISTEN

@@ -1,0 +1,6 @@
+Listing 9-7. Stateful Filtering with IPF
+pass in all
+pass out all
+pass out proto tcp/udp from any to any keep state
+block return-rst in proto tcp from any to any
+block in proto udp from any to any

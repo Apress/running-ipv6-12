@@ -1,0 +1,15 @@
+Listing 11-2. Manual Configuration for Two Multi-Subnet Customers
+!
+interface Ethernet1
+ description Customer 100
+ ipv6 address 2001:DB8:2:100::1/64
+ ipv6 nd suppress-ra
+!
+interface Ethernet2
+ description Customer A4FF
+ ipv6 address 2001:DB8:2:A4FF::1/64
+ ipv6 nd suppress-ra
+!
+ipv6 route 2001:DB8:100::/48 2001:DB8:2:100::2
+ipv6 route 2001:DB8:A4FF::/48 2001:DB8:2:A4FF::2
+!

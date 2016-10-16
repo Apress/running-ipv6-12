@@ -1,0 +1,14 @@
+Listing 4-27. The OSPF Routes in the IPv6 Routing Table
+#show ipv6 route ospf
+IPv6 Routing Table - 644 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       U - Per-user Static route
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary
+       O - OSPF intra, OI - OSPF inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2
+       ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+O   2001:7F8:1::/64 [110/2]
+     via FE80::290:6902:EE02:E43E, FastEthernet2/0
+O   2001:DB8:31:2::/64 [110/2]
+     via FE80::212:1E02:EE05:58DB, FastEthernet2/0
+OE2  3FFE:9500:3C:600::/56 [110/0]
+     via FE80::212:1E02:EE05:58DB, FastEthernet2/0

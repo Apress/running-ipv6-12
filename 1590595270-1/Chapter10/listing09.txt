@@ -1,0 +1,11 @@
+Listing 10-9. Listing Addresses, Under Windows, Uncovering a DAD Failure
+netsh interface ipv6>show address
+Querying active state...
+
+Interface 5: Local Area Connection 3
+
+Addr Type  DAD State  Valid Life   Pref. Life   Address
+---------  ---------- ------------ ------------ -----------------------------
+Temporary  Preferred   6d23h59m39s    23h56m52s 2001:db8:31:2:ff8f:41ae:c9f6:a97
+Public     Duplicate  29d23h59m58s  6d23h59m58s 2001:db8:31:2:201:2ff:fe29:23b6
+Link       Preferred      infinite     infinite fe80::201:2ff:fe29:23b6

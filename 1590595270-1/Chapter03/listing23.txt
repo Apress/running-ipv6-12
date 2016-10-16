@@ -1,0 +1,4 @@
+Listing 3-23. The Contents of /etc/sysconfig/network
+NETWORKING_IPV6="yes"
+IPV6_DEFAULTDEV=sit1
+IPV6_DEFAULTGW=2001:db8:31:1::1

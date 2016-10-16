@@ -1,0 +1,4 @@
+Listing 6-5. sendmail IPv6-relevant .mc Configuration
+DAEMON_OPTIONS(`Name=MTA-IPv4, Family=inet')
+DAEMON_OPTIONS(`Name=MTA-IPv6, Family=inet6')
+define(`confBIND_OPTS', `WorkAroundBrokenAAAA')

@@ -1,0 +1,11 @@
+Listing 3-14. Tunnel Configuration Mistakes
+# ifconfig gif3
+gif3: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+# ifconfig gif3 tunnel 192.0.2.1 223.224.225.227
+# ifconfig gif4 192.0.2.1 223.224.225.228
+# ifconfig
+gif3: flags=8050<POINTOPOINT,RUNNING,MULTICAST> mtu 1280
+        tunnel inet 192.0.2.1 --> 223.224.225.227
+gif4: flags=8011<UP,POINTOPOINT,MULTICAST> mtu 1280
+        inet 192.0.2.1 --> 223.224.225.228 netmask 0xffffff00 
+        inet6 fe80::201:2ff:fe29:2640%gif4 prefixlen 64 scopeid 0xc 

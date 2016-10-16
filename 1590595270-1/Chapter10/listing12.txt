@@ -1,0 +1,8 @@
+Listing 10-12. Displaying the Neighbor Cache on FreeBSD or MacOS with ndp
+% ndp -an
+Neighbor                        Linklayer Address  Netif Expire    St Flgs Prbs
+::1                             (incomplete)         lo0 permanent R      
+2001:1af8:6::20a:95ff:fef5:246e 0:a:95:f5:24:6e      en1 permanent R      
+fe80::1%lo0                     (incomplete)         lo0 permanent R      
+fe80::204:27ff:fefe:249f%en1    0:4:27:fe:24:9f      en1 23h57m56s S  R   
+fe80::20a:95ff:fef5:246e%en1    0:a:95:f5:24:6e      en1 permanent R

@@ -1,0 +1,20 @@
+Listing B-4. A Shell Script to Set Up an IPv6 Tunnel at System Startup
+#!/bin/sh
+
+. /etc/rc.common
+
+case "$1" in
+
+  start)
+    ifconfig gif0 tunnel 192.0.2.1 223.224.225.226
+    ifconfig gif0 inet6 2001:db8:31:1::2/64
+    route add -inet6 default 2001:db8:31:1::1
+    ;;
+
+  stop)
+    route delete -inet6 default 2001:db8:31:1::1
+    ifconfig gif0 inet6 -alias 2001:db8:31:1::2/64
+    ifconfig gif0 deletetunnel
+    ;;
+
+esac

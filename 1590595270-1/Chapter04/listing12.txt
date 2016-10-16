@@ -1,0 +1,19 @@
+Listing 4-12. A Static Route Under MacOS
+% sudo route add -inet6 2001:db8:31:c03:: -prefixlen 64 2001:db8:31:2::abf
+% netstat -rnf inet6
+Routing tables
+
+Internet6:
+Destination           Gateway             Flags  Netif Expire
+2001:db8:31:c03::/64  2001:db8:31:2::abf  UGSc   en0
+% route -n get -inet6 2001:db8:31:c03:: -prefixlen 64
+   route to: 2001:db8:31:c03::
+destination: 2001:db8:31:c03::
+       mask: ffff:ffff:ffff:ffff::
+    gateway: 2001:db8:31:2::abf
+  interface: en0
+      flags: <UP,GATEWAY,DONE,STATIC,PRCLONING>
+ recvpipe sendpipe ssthresh rtt,msec rttvar hopcount   mtu  expire
+       0         0        0        0      0        0  1500       0
+% sudo route delete -inet6 2001:db8:31:c03:: -prefixlen 64 2001:db8:31:2::abf
+delete net 2001:db8:31:c03::: gateway 2001:db8:31:2::abf

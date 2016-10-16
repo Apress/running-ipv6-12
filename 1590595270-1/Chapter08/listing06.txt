@@ -1,0 +1,9 @@
+Listing 8-6. A KAME dhcp6s.conf File
+option domain-name-servers 2001:db8:31:2::53;
+option domain-name "example.com";
+
+host router
+  {
+    duid 00:03:00:01:00:04:27:FE:24:9F;
+    prefix 2001:db8:4700::/48 86400 259200;
+  };

@@ -1,0 +1,6 @@
+Listing 8-7. A KAME dhcp6c.conf File
+interface xl0
+  {
+    information-only;
+    script "/etc/dhcp6clientscript.sh";
+  };

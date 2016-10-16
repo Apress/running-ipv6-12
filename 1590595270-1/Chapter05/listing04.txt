@@ -1,0 +1,4 @@
+Listing 5-4. The DNAME record
+research.example.com.              IN  DNAME  r-and-d.example.com.
+www.plastics.r-and-d.example.com.  IN  A      192.0.2.1
+www.biotech.r-and-d.example.com.   IN  A      192.0.2.2

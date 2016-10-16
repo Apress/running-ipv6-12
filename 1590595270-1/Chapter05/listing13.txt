@@ -1,0 +1,9 @@
+Listing 5-13. Fake RFC 2874 Reverse Mapping
+$TTL 86400
+
+@   IN  SOA ns1.example.com. root.example.com. ( 2005020900 28800 7200 604800 86400 )
+                    IN  NS      ns1.example.com.
+
+*.\[x2/3].ip6.arpa. IN  PTR     bit.label.ip6.arpa.
+
+\[x20010db800310001020a95fffecd987a/128].ip6.arpa. IN CNAME a.7.8.9.d.c.e.f.f.f.5.9.a.0.2.0.1.0.0.0.1.3.0.0.8.b.d.0.1.0.0.2.ip6.arpa.

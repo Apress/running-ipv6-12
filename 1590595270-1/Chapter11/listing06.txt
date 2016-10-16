@@ -1,0 +1,8 @@
+Listing 11-6. Hybrid Stateless Autoconfiguration and Manual Routing of a /48
+!
+interface ATM0.100
+ description Customer 100
+ ipv6 address 2001:DB8:2:100::1/64
+!
+ipv6 route 2001:DB8:100::/48 2001:DB8:2:100::2
+!

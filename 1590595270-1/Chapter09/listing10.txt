@@ -1,0 +1,5 @@
+Listing 9-10. Stateful Filtering with PF
+scrub in all
+pass all
+pass out proto { tcp, udp } from any to any keep state
+block return in proto { tcp, udp } from any to any

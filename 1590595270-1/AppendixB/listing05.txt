@@ -1,0 +1,13 @@
+Listing B-5. The Contents of the StartupParameters.plist File
+{
+  Description = "IPv6 tunnel";
+  Provides = ("IPv6Tunnel");
+  Requires = ("Network");
+  Uses = ("Network");
+  OrderPreference = "None";
+  Messages =
+    {
+      start = "Starting IPv6 tunnel";
+      stop = "Stopping IPv6 tunnel";
+    };
+}

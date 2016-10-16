@@ -1,0 +1,59 @@
+Listing 4-16. Connecting to the zebra Daemon for the First Time
+# telnet localhost 2601
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+
+Hello, this is zebra (version 0.94).
+Copyright 1996-2002 Kunihiro Ishiguro.
+
+
+User Access Verification
+
+Password: 
+zebra-t> enable
+Password: 
+zebra-t# show running-config 
+
+Current configuration:
+!
+hostname zebra-t
+password 8 U2uZd3cGSy89g
+enable password 8 0qFt0GjdVxDwI
+service password-encryption
+!
+interface lo
+!
+interface eth0
+ ipv6 nd suppress-ra
+!
+interface sit1
+ ipv6 nd suppress-ra
+!
+access-list zebra-access permit 127.0.0.1/32
+!
+!
+line vty
+ access-class zebra-access
+!
+end
+zebra-t# configure terminal 
+zebra-t(config)# interface eth0
+zebra-t(config-if)# description First Ethernet interface
+zebra-t(config-if)# exit
+zebra-t(config)# exit
+zebra-t# show interface eth0 
+Interface eth0
+  Description: First Ethernet interface 
+  index 3 metric 1 mtu 1500 <UP,BROADCAST,RUNNING,MULTICAST>
+  HWaddr: 00:01:02:29:23:b6
+  inet 172.16.1.5/24 broadcast 255.255.255.255
+  inet6 fe80::201:2ff:fe29:23b6/64
+  inet6 2001:db8:31:2::1/64
+    input packets 9624, bytes 1142979, dropped 0, multicast packets 0
+    input errors 0, length 0, overrun 0, CRC 0, frame 0, fifo 0, missed 0
+    output packets 5549, bytes 1042517, dropped 0
+    output errors 0, aborted 0, carrier 0, fifo 0, heartbeat 0, window 0
+    collisions 0
+zebra-t# quit
+Connection closed by foreign host.

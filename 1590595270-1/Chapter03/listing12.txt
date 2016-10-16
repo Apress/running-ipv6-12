@@ -1,0 +1,14 @@
+Listing 3-12. Removing a Manual Tunnel
+C:\>netsh
+netsh>interface ipv6
+netsh interface ipv6>delete route prefix=::/0 interface=tun0 nexthop=2001:db8:31:1::1
+Ok.
+
+netsh interface ipv6>delete route prefix=2001:db8:31:1::/64 interface=tun0
+Ok.
+
+netsh interface ipv6>delete address interface=tun0 address=2001:db8:31:1::2
+Ok.
+
+netsh interface ipv6>delete interface interface=tun0
+Ok.

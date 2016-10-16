@@ -1,0 +1,24 @@
+Listing 8-5. The Address Policy Table Under Windows XP
+C:\>netsh
+netsh>interface ipv6
+netsh interface ipv6>show prefixpolicy
+Querying active state...
+
+Precedence  Label  Prefix
+----------  -----  --------------------------------
+         5      5  3ffe:831f::/32
+        10      4  ::ffff:0:0/96
+        20      3  ::/96
+        30      2  2002::/16
+        40      1  ::/0
+        50      0  ::1/128
+
+netsh interface ipv6>set prefixpolicy ::ffff:83.0.0.0/104 60 4
+Ok.
+
+netsh interface ipv6>show prefixpolicy
+Querying active state...
+
+Precedence  Label  Prefix
+----------  -----  --------------------------------
+        60      4  ::ffff:83.0.0.0/104

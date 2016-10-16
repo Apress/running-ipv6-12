@@ -1,0 +1,9 @@
+Listing 2-2. Using ifconfig to Monitor IPv6 Addresses on FreeBSD
+# ifconfig xl0
+xl0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        inet 192.0.2.123 netmask 0xffffff00 broadcast 192.0.2.255
+        inet6 fe80::201:2ff:fe29:2640%xl0 prefixlen 64 scopeid 0x1
+        inet6 2001:db8:31:2:201:2ff:fe29:2640 prefixlen 64 autoconf 
+        ether 00:01:02:29:26:40
+        media: Ethernet autoselect (100baseTX <full-duplex>)
+        status: active

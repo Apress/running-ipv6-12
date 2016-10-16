@@ -1,0 +1,12 @@
+Listing 2-3. Using ifconfig to Monitor IPv6 Addresses on Linux
+# /sbin/ifconfig eth0
+eth0      Link encap:Ethernet  HWaddr 00:01:02:29:23:B6  
+          inet addr:192.0.2.8  Bcast:192.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::201:2ff:fe29:23b6/64 Scope:Link
+          inet6 addr: 2001:db8:1dde:1:201:2ff:fe29:23b6/64 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:226 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:76 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:100 
+          RX bytes:27348 (26.7 Kb)  TX bytes:13251 (12.9 Kb)
+          Interrupt:10 Base address:0xd000 

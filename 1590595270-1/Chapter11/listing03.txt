@@ -1,0 +1,13 @@
+Listing 11-3. Multi-Subnet Customer Provisioning with RIPng, ISP Side
+!
+interface Ethernet1
+ ipv6 address 2001:DB8:2:100::/64 eui-64
+ ipv6 nd suppress-ra
+ ipv6 rip cust100 enable
+ ipv6 rip cust100 default-information only
+!         
+ipv6 router rip cust100
+  distribute-list prefix-list cust100-in in  
+!         
+ipv6 prefix-list cust100-in seq 5 permit 2001:DB8:100::/48
+!

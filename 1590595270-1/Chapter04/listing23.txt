@@ -1,0 +1,9 @@
+Listing 4-23. Enabling RIPng on a Cisco Router
+!
+interface Ethernet0
+ ipv6 rip my-rip enable
+ ipv6 rip my-rip default-information originate
+!
+ipv6 router rip my-rip
+ redistribute connected
+!

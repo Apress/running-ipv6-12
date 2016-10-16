@@ -1,0 +1,23 @@
+Listing 10-11. DAD Failure on a Cisco Router
+3w0d: %IPV6-4-DUPLICATE: Duplicate address 2001:DB8:31:2:204:27FF:FEFE:249F on Ethernet0
+Cisco#show ipv6 interface ethernet 0
+Ethernet0 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::204:27FF:FEFE:249F 
+  Global unicast address(es):
+    2001:DB8:31:2:204:27FF:FEFE:249F, subnet is 2001:DB8:31:2::/64 [EUI/DUP]
+    3FFE:FFFF:310:3:204:27FF:FEFE:249F, subnet is 3FFE:FFFF:310:3::/64 [EUI]
+  Joined group address(es):
+    FF02::1
+    FF02::2
+    FF02::9
+    FF02::1:FFFE:249F
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds
+  ND advertised reachable time is 0 milliseconds
+  ND advertised retransmit interval is 0 milliseconds
+  ND router advertisements are sent every 200 seconds
+  ND router advertisements live for 7200 seconds
+  Hosts use stateless autoconfig for addresses.

@@ -1,0 +1,33 @@
+Listing 5-8. The /etc/named.conf file
+options {
+  directory "/var/named";
+  allow-recursion { 192.0.2.0/24; 2001:db8:1bff::/48; };
+  listen-on { 192.0.2.106; }
+  listen-on-v6 { any; };
+# forward first;
+# forwarders { 192.0.2.53; };
+/* C-style comment */
+// C++-style comment
+};
+
+zone "." {
+  type hint;
+  file "named.root";
+};
+
+zone "0.0.127.IN-ADDR.ARPA" {
+  type master;
+  file "localhost.rev";
+};
+
+zone "example.com" {
+  type slave;
+  file "example.com";
+  masters { 192.0.2.53; };
+};
+
+zone "0.0.0.0.f.f.b.1.8.b.d.0.1.0.0.2.ip6.arpa."
+  {
+    type master;
+    file "db.2001:db8:1bff:0";
+  };

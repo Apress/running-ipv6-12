@@ -1,0 +1,16 @@
+Listing 3-9. Monitoring 6to4 Under FreeBSD or MacOS
+# ifconfig stf0
+stf0: flags=1<UP> mtu 1280
+        inet6 2002:dfe0:e1e2:1::1 prefixlen 16 
+# netstat -rnf inet6
+Destination        Gateway               Flags      Netif Expire
+::/96              ::1                   UGRSc       lo0 =>
+default            2002:c058:6301::      UGSc       stf0
+::1                ::1                   UH          lo0
+::ffff:0.0.0.0/96  ::1                   UGRSc       lo0
+2002::/24          ::1                   UGRSc       lo0 =>
+2002::/16          2002:dfe0:e1e2:1::1   Uc         stf0
+2002:7f00::/24     ::1                   UGRSc       lo0
+2002:dfe0:e1e2::1   link#7               UHL         lo0
+2002:e000::/20     ::1                   UGRSc       lo0
+2002:ff00::/24     ::1                   UGRSc       lo0

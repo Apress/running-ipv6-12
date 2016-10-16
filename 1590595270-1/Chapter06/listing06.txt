@@ -1,0 +1,7 @@
+Listing 6-6. sendmail IPv6-relevant .cf configuration
+# SMTP daemon options
+O DaemonPortOptions=Name=MTA-IPv4, Family=inet
+O DaemonPortOptions=Name=MTA-IPv6, Family=inet6
+
+# name resolver options
+O ResolverOptions=WorkAroundBrokenAAAA

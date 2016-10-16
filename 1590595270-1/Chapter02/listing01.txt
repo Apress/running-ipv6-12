@@ -1,0 +1,20 @@
+Listing 2-1. Monitoring IPv6 Addresses with the netsh Command
+C:\>netsh
+netsh>interface ipv6
+netsh interface ipv6>show addres
+
+Querying active state...
+
+Interface 6: Local Area Connection 3
+Addr Type  DAD State  Valid Life   Pref. Life   Address
+---------  ---------- ------------ ------------ -----------------------------
+Temporary  Preferred   6d23h38m55s     23h36m8s 2001:db8:1dde:1:6d16:9d1:b1ec:2245
+Public     Preferred  29d23h59m30s  6d23h59m30s 2001:db8:1dde:1:201:2ff:fe29:23b6
+Link       Preferred      infinite     infinite fe80::201:2ff:fe29:23b6
+
+Interface 1: Loopback Pseudo-Interface
+
+Addr Type  DAD State  Valid Life   Pref. Life   Address
+---------  ---------- ------------ ------------ -----------------------------
+Loopback   Preferred      infinite     infinite ::1
+Link       Preferred      infinite     infinite fe80::1

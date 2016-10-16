@@ -1,0 +1,17 @@
+Listing 9-11. Filtering by Using IPv6 Access Lists on a Cisco Router
+!
+interface Ethernet1
+ ipv6 traffic-filter in-ipv6-acl in
+ ipv6 traffic-filter out-ipv6-acl out
+!
+ipv6 access-list in-ipv6-acl
+ deny ipv6 2001:DB8::/32 any
+ deny icmp any host FF02::1 echo-request
+ permit tcp any any established
+ deny tcp any any
+ permit ipv6 any any
+!
+ipv6 access-list out-ipv6-acl
+ deny tcp any any eq smtp
+ permit ipv6 any any
+!

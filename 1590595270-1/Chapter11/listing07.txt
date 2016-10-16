@@ -1,0 +1,11 @@
+Listing 11-7. A Cisco 6to4-to-IPv6 Gateway Configuration
+!
+interface Loopback2002
+ ip address 192.88.99.1 255.255.255.255
+!
+interface Tunnel2002
+ ipv6 enable
+ ipv6 mtu 1280
+ tunnel source 192.88.99.1
+ tunnel mode ipv6ip 6to4
+!

@@ -1,0 +1,15 @@
+Listing 4-15. A Basic zebra Configuration
+!
+hostname zebra
+password easy-to-guess
+enable password hard-to-guess
+!
+access-list zebra-access permit 127.0.0.1/32
+!
+ipv6 access-list zebra-access-ipv6 permit ::1/128
+!
+line vty
+ access-class zebra-access
+ ipv6 access-class zebra-access-ipv6
+ exec-timeout 60
+!

@@ -1,0 +1,38 @@
+Listing 5-9. A Zone with AAAA Records
+;   20041215    IvB created
+;   20050209    IvB added AAAA records
+
+$TTL 86400
+
+@   IN  SOA ns1.example.com. root.example.com. (
+            2005020900      ; Serial
+            28800           ; Refresh (8 hours)
+            7200            ; Retry (2 hours)
+            604800          ; Expire (7 days)
+            86400 )         ; Minimum (1 day)
+
+            IN  NS      ns1.example.com.
+            IN  NS      ns2.beispiel.de.
+
+            IN  MX      100 smtp.example.com.
+            IN  MX      200 smtp.ipv4.example.com.
+
+            IN  A       192.0.2.80
+            IN  AAAA    2001:db8:31:1:201:2ff:fe29:2640
+
+ns1         IN  A       192.0.2.80
+            IN  AAAA    2001:db8:31:53::53
+            IN  A6      0 2001:db8:31:53::53
+
+www         IN  A       192.0.2.80
+www         IN  AAAA    2001:db8:31:1:201:2ff:fe29:2640
+www.ipv4    IN  A       192.0.2.80
+www.ipv6    IN  AAAA    2001:db8:31:1:201:2ff:fe29:2640
+
+smtp        IN  A       192.0.2.25
+smtp        IN  AAAA    2001:db8:31:1:20a:95ff:fecd:987a
+smtp.ipv4   IN  A       192.0.2.25
+
+pop         IN  A       192.0.2.25
+popv4v6     IN  A       192.0.2.25
+popv4v6     IN  AAAA    2001:db8:31:1:20a:95ff:fecd:987a

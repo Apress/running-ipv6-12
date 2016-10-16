@@ -1,0 +1,10 @@
+Listing 4-22. Displaying the RIPng Database on Zebra
+ripngd# show ipv6 ripng
+
+Codes: R - RIPng
+
+   Network                Next Hop                 If Met Tag Time
+R  ::/0                   ::                        0   1   0   
+R  2001:db8:31:1::/64     fe80::260:70ff:fe35:aa5e  3   2   0 02:59
+S  2001:db8:31:2::/64     ::                        3   1   0 
+R  3ffe:9500:3c:600::/56  fe80::204:27ff:fefe:249f  3   2   0 02:54

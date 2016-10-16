@@ -1,0 +1,9 @@
+Listing 10-14. Determining a Session's IP Version with netstat
+% netstat -n | more
+Active Internet connections
+Proto Recv-Q Send-Q  Local Address          Foreign Address       (state)
+tcp6       0      0  2001:db8:31::20a.55858 3ffe:ffff:2310:2.993  ESTABLISHED
+tcp4       0      0  192.0.2.6.55672        192.0.2.225.22        ESTABLISHED
+tcp6       0      0  2001:db8:31::20a.52731 2001:db8:2:5::2.80    CLOSE_WAIT
+udp6       0      0  *.5353                 *.*
+udp4       0      0  *.5353                 *.*
